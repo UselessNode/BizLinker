@@ -1,0 +1,18 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h3>Выбор роли</h3>
+<MudButton OnClick="NavigateToSupplier">Поставщик</MudButton>
+<MudButton OnClick="NavigateToBusiness">Бизнес</MudButton>
+
+@code {
+    private void NavigateToSupplier()
+    {
+        NavigationManager.NavigateTo("/supplier/dashboard");
+    }
+
+    private void NavigateToBusiness()
+    {
+        NavigationManager.NavigateTo("/business/dashboard");
+    }
+}
